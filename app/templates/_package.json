@@ -1,0 +1,22 @@
+{
+  "name": "<%= pkgName %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "devDependencies": {
+    "co-request": "^0.2.1",
+    "gulp": "^3.9.0",
+    "gulp-clean": "0.3.x",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-jshint": "^1.9.4",
+    "gulp-less": "^1.2.3",
+    "gulp-magix-combine": "^1.0.4",
+    "gulp-magix-spmlog": "^1.0.5",
+    "gulp-uglify": "0.3.0",
+    "koa-bodyparser": "^2.0.0",
+    "koa-proxy": "^0.2.0",
+    "mockjs": "^0.1.4",
+    "qfilter": "0.0.7",
+    "request": "~2.53.0"
+  }
+}

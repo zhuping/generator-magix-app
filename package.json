@@ -1,0 +1,28 @@
+{
+  "name": "generator-magix-app",
+  "version": "0.0.1",
+  "description": "Yeoman generator for Magix",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zhuping/generator-magix-app.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "magix"
+  ],
+  "author": "zhuping.zp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhuping/generator-magix-app/issues"
+  },
+  "homepage": "https://github.com/zhuping/generator-magix-app#readme",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "yeoman-generator": "^0.20.1",
+    "yosay": "^1.0.4"
+  }
+}
