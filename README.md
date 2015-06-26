@@ -1,5 +1,7 @@
 # generator-magix-app
 
+Yeoman generator for Magix
+
 ## Usage
 
 ### Create your project
@@ -19,5 +21,4 @@ Make a new directory, and `cd` into it:
 mkdir my-new-project && cd $_
 ```
 
-Run `yo magix-app`, optionally passing an app name:
-```
+Run `yo magix-app`
