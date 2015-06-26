@@ -34,14 +34,14 @@ var MagixAppGenerator = yeoman.generators.Base.extend({
       message: 'application description'
     }, {
       type: 'list',
-      name: 'magix',
-      message: 'which version of magix',
+      name: 'build',
+      message: 'which tool to build project',
       choices: [{
-        name: 'Magix2.0(requirejs+jQuery版)',
-        value: '2.0'
+        name: 'Gulp',
+        value: 'gulp'
       }, {
-        name: 'Magix1.2(Kissy版)',
-        value: '1.2'
+        name: 'Grunt',
+        value: 'grunt'
       }]
     }, {
       type: 'input',
