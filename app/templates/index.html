@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="//g.alicdn.com/thx/cube/1.2.1/neat-min.css">
+    <link rel="stylesheet" type="text/css" href="//g.alicdn.com/thx/brix-release/0.1.6/brix-components/dist/??pagination/pagination.css,dropdown/dropdown.css,dialog/dialog.css,datepickerwrapper/datepickerwrapper.css,datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="./app/assets/index.css">
+    <script type="text/javascript" src="//g.alicdn.com/thx/brix-release/0.1.4/require-config-debug.js"></script>
+  </head>
+  <body>
+    <script>
+      // 放一个全局变量存储当前用户的信息
+      window.UserInfo = {
+        debug: !!(~location.search.indexOf('debug'))
+      }
+    </script>
+    <script type="text/javascript" src="./app/boot.js"></script>
+  </body>
+</html>

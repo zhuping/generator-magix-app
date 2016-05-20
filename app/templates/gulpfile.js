@@ -1,11 +1,10 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var clean = require('gulp-clean');
-var uglify = require('gulp-uglify');
-var cssmin = require('gulp-cssmin');
-var jshint = require('gulp-jshint');
-var combine = require('gulp-magix-combine');
-var spmlog = require('gulp-magix-spmlog');
+var gulp    = require('gulp')
+var less    = require('gulp-less')
+var uglify  = require('gulp-uglify')
+var cssmin  = require('gulp-cssmin')
+var clean   = require('gulp-clean')
+var combine = require('gulp-magix-combine')
+var jshint  = require('gulp-jshint')
 
 var globs = [
   '.jshintrc',
@@ -17,7 +16,7 @@ gulp.task('jshint', ['css'], function() {
   return gulp.src(globs)
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
-})
+});
 
 gulp.task('less', ['clean'], function() {
   return gulp.src('./app/exts/**/*.less')
@@ -28,18 +27,14 @@ gulp.task('less', ['clean'], function() {
 });
 
 gulp.task('css', ['less'], function() {
-  return gulp.src('./app/assets/css/**/quake.less')
+  return gulp.src('./app/assets/**/index.less')
     .pipe(less())
-    .pipe(gulp.dest('./build/app_debug/assets/css/'))
+    .pipe(gulp.dest('./build/app_debug/assets/'))
     .pipe(cssmin({
       compatibility: 'ie7'
     }))
-    .pipe(gulp.dest('./build/app/assets/css/'));
+    .pipe(gulp.dest('./build/app/assets/'));
 });
-
-/*
- * Concat JavaScript and HTML of View
- */
 
 gulp.task('js', ['jshint'], function() {
   gulp.src('./app/views/**/*.js')
@@ -59,6 +54,9 @@ gulp.task('js', ['jshint'], function() {
     .pipe(uglify({
       output: {
         ascii_only: true
+      },
+      preserveComments: function(node, comment){
+        return /@heredoc|@preserve|@license|@cc_on/i.test(comment.value);
       }
     }))
     .pipe(gulp.dest('./build/app/'));
@@ -66,32 +64,12 @@ gulp.task('js', ['jshint'], function() {
 
 gulp.task('clean', function() {
   return gulp.src(['./build/'], {
-      read: false
-    })
-    .pipe(clean({
-      force: true
-    }));
+    read: false
+  })
+  .pipe(clean({
+    force: true
+  }));
 });
-
-
-/*
- * 黄金令箭埋点
- * @params logkey 申请到的业务串
- */
-
-gulp.task('spmlog', function() {
-  gulp.src('./app/views/**/*.html')
-    .pipe(spmlog({
-      logkey: 'tblm.88.1',
-      filter: [
-        '[mx-click]',
-        '[href^="#!"]'
-      ]
-    }))
-    .pipe(gulp.dest('./app/views/'));
-});
-
-
 
 // 打包压缩
 gulp.task('build', ['js']);

@@ -1,0 +1,25 @@
+{
+  "name": "<%= pkgName %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "repository": {
+    "type": "git",
+    "url": "<%= repo %>"
+  },
+  "license": "<%= license %>",
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-clean": "~0.3.2",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-jshint": "~2.0.1",
+    "gulp-less": "~3.1.0",
+    "gulp-magix-combine": "~1.0.4",
+    "gulp-uglify": "~1.5.3",
+    "jshint": "~2.9.2",
+    "mat": "~0.1.10",
+    "mat-less": "0.0.3",
+    "mat-proxy": "0.0.2",
+    "mat-rap": "0.0.3"
+  }
+}
