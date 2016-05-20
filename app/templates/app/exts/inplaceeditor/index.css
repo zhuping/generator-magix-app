@@ -1,0 +1,43 @@
+.inplaceeditor-popup {
+  position: absolute;
+  display: block;
+  z-index: 9999;
+  visibility: hidden;
+  top: -9999px;
+  left: -9999px;
+}
+.inplaceeditor-popup .input {
+  margin-bottom: 0;
+}
+.inplaceeditor-popup .input-error,
+.inplaceeditor-popup input-error:hover {
+  border-color: #A40100 !important;
+}
+.inplaceeditor-popup .inplaceeditor-hidden {
+  visibility: hidden;
+}
+.inplaceeditor-tooltip {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 7px;
+  max-width: 150px;
+}
+.inplaceeditor {
+  position: relative;
+  *position: static;
+}
+.inplaceeditor .icon-edit {
+  position: absolute;
+  *position: static;
+  *margin-left: 5px;
+  right: 0;
+}

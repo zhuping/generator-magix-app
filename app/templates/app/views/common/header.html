@@ -1,0 +1,15 @@
+<div class="common-header clearfix">
+  <div class="logo">
+    <a class="mgfont ml30" href="#!/home/index">&#xe600;</a>
+    <a class="mgfont" href="#!/home/index">&#xe601;</a>
+  </div>
+  <ul class="nav">
+  {{#for(item in menuList)}}
+    <li t-class:active="item.active"><a href="#!{{item.path}}">{{item.text}}</a></li>
+  {{/for}}
+  </ul>
+  <div class="fr mr30">
+    <span class="mr10">藤虎，<a class="color-white" href="{{logoutUrl}}">退出</a></span>
+  <a href="http://majibao.alimama.com/index.htm" target="_blank" class="mgfont color-white f20">&#xe607;</a>
+  </div>
+</div>

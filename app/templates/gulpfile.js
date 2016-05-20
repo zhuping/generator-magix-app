@@ -72,4 +72,4 @@ gulp.task('clean', function() {
 });
 
 // 打包压缩
-gulp.task('build', ['js']);
+gulp.task('default', ['js']);

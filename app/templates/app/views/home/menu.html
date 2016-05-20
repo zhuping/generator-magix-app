@@ -1,0 +1,18 @@
+<div id="J_{{viewId}}_nav" class="sub-nav">
+  <div class="sub-nav-wrap">
+    <div class="menu-icon menu-click"> 
+      <i class="mgfont cp" mx-click="open">&#xe606;</i> 
+    </div>
+    <div class="menu-hold menu-click tc">
+      <i class="menu-hold-btn mgfont" mx-click="close" title="固定侧栏">&#xe605;</i>
+    </div>
+    <ul class="common-menu">
+      {{#tabs}}
+      <li {{#if selected}}class="active"{{/if}} mx-click="toggleTab({{key}})">
+        <span class="icon mgfont">{{{icon}}}</span>
+        <i class="mgfont">{{{icon}}}</i>{{label}}
+      </li>
+      {{/tabs}}
+    </ul>
+  </div>
+</div>

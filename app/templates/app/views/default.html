@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div mx-vframe="true" mx-view="app/views/common/header" id="magix_vf_header"></div>
+  <div class="wrap clearfix">
+    <div class="main">
+      <div id="inmain" class="inmain inmain-padding">
+        <div mx-vframe="true" id="magix_vf_main"></div>
+      </div>
+    </div>
+
+    <!-- 导航 -->
+    <div class="sidebar">
+      {{#if(home)}}
+      <div mx-vframe="true" mx-view="app/views/home/menu"></div>
+      {{/if}}
+      {{#if(manage)}}
+      <div mx-vframe="true" mx-view="app/views/manage/menu"></div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="footer" mx-vframe="true" id="magix_vf_footer" mx-view="app/views/common/footer"></div>
+</div>
+
+

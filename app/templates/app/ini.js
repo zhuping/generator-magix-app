@@ -6,14 +6,17 @@ define('app/ini', [
   var T = {
     routes: {
       'app/views/default': [
-        
+        // 首页
+        '/home/index',
+        // 管理
+        '/manage/index'
       ]
     }
   }
 
   return {
     defaultView: MainView,
-    defaultPath: '',
+    defaultPath: '/home/index',
     unfoundView: 'app/views/common/404',
     tagName: 'div',
     extensions: [

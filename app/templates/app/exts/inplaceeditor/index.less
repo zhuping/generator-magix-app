@@ -1,0 +1,56 @@
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+.inplaceeditor-popup {
+  position: absolute;
+  display: block;
+  z-index: 9999;
+  visibility: hidden;
+  top: -9999px;
+  left: -9999px;
+  .input {
+  	margin-bottom: 0;
+  }
+  .input-error,
+  input-error:hover {
+	border-color: #A40100 !important;
+	//.box-shadow(~"0 0 8px rgba(236, 0, 0, .6)");
+  }
+  .inplaceeditor-hidden {
+  	visibility: hidden;
+  }
+}
+.inplaceeditor-tooltip {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  .border-radius(2px);
+  .box-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+  border: 1px solid #ddd;
+  background-color: #fff;
+	padding: 7px;
+  max-width: 150px;
+}
+//下面的hack是给IE67设的，防止编辑的小笔出现在fieldsetting的弹出层上
+.inplaceeditor {
+	position: relative;
+	*position: static;
+	.icon-edit {
+		position: absolute;
+		*position: static;
+		*margin-left: 5px;
+		right: 0;
+	}
+}

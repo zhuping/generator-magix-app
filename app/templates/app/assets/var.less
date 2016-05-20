@@ -1,0 +1,96 @@
+// 通用颜色
+@color-green: #51a300;
+@color-blue: #0066dd;
+@color-red: #ef3000;
+@color-yellow: #fcbc52;
+
+// 品牌色
+@color-brand: #F24455;
+@color-brand-hover: #de3e4e;
+
+// a连接颜色
+@a-color: #666;
+// a连接hover颜色
+/*@a-color-hover: #ff8800;*/
+
+.border-radius (@radius) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-shadow (@value) {
+  -moz-box-shadow: @value;
+  -webkit-box-shadow: @value;
+  -ms-box-shadow: @value;
+  -o-box-shadow: @value;
+  box-shadow: @value;
+}
+.box-sizing(@value){
+  -moz-box-sizing: @value;
+  -webkit-box-sizing: @value;
+  box-sizing: @value;
+}
+.auto-height (@height) {
+  height: auto !important;
+  height: @height;
+  min-height: @height;
+}
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+.transition (@value) {
+  -moz-transition: @value;
+  -webkit-transition: @value;
+  -ms-transition: @value;
+  -o-transition: @value;
+  transition: @value;
+}
+.transform (@value) {
+  -webkit-transform: @value;
+  -moz-transform: @value;
+  -ms-transform: @value;
+  -o-transform: @value;
+  transform: @value;
+}
+.animation (@value) {
+  -webkit-animation: @value;
+  -moz-animation: @value;
+  -ms-animation: @value;
+  -o-animation: @value;
+  animation: @value;
+}
+.retina (@bg1, @bg2) {
+  background: url(@bg1);
+  background-image: -webkit-image-set(url(@bg1) 1x,url(@bg2) 2x);
+  background-image: -moz-image-set(url(@bg1) 1x,url(@bg2) 2x);
+  background-image: -ms-image-set(url(@bg1) 1x,url(@bg2) 2x);
+  background-image: -o-image-set(url(@bg1) 1x,url(@bg2) 2x);
+  background-repeat: no-repeat;
+}
+.px2rem (@name, @px) {
+  @{name}: @px / 37.5 * 1rem;
+}
+.bg-condition-light() {
+  background: rgba(32, 32, 64, 0.04);
+  background: #f3f3f8\9;
+}
+.bg-condition() {
+  background: rgba(32, 32, 64, 0.08);
+  background: #ededf0\9;
+}
+.bg-condition-deep() {
+  background: rgba(32, 32, 64, 0.16);
+  background: #ebebf0\9;
+}
+.iconfont(@content) {
+  content: @content;
+  font-family: "pubfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
