@@ -82,6 +82,10 @@ var MagixAppGenerator = generators.Base.extend({
         this.destinationPath('gulpfile.js')
       );
       this.fs.copy(
+        this.templatePath('matfile.js'),
+        this.destinationPath('matfile.js')
+      );
+      this.fs.copy(
         this.templatePath('.gitignore'),
         this.destinationPath('.gitignore')
       );
